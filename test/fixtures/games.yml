@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  game_status: 1
+  whos_turn: 1
+  spaces: MyText
+
+two:
+  game_status: 1
+  whos_turn: 1
+  spaces: MyText
