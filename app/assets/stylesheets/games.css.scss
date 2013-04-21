@@ -1,6 +1,32 @@
 
 
 
+
+.index_title {
+    padding-left: 100px;
+    font-family: 'Permanent Marker', cursive;
+}
+.index_active_games_title {
+    padding-left: 100px;
+    font-family: 'Permanent Marker', cursive;
+}
+.index_game_list {
+	padding-left: 140px;
+    font-family: 'Permanent Marker', cursive;
+}
+.index_users_list_title {
+    padding-left: 100px;
+    font-family: 'Permanent Marker', cursive;
+}
+.index_all_users_list {
+	padding-left: 140px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+
+
+
 .home_sign_in {
 	font-family: 'Permanent Marker', cursive;
 	display:inline-block;
@@ -71,6 +97,104 @@
   	padding: 0;
 }
 
+.board_column_one {
+	position: absolute;
+	bottom: 30px;
+	left: 47px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+.board_column_two {
+	position: absolute;
+	bottom: 30px;
+	left: 133px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+.board_column_three {
+	position: absolute;
+	bottom: 30px;
+	left: 219px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+.board_column_four {
+	position: absolute;
+	bottom: 30px;
+	left: 305px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+.board_column_five {
+	position: absolute;
+	bottom: 30px;
+	left: 391px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+.board_column_six {
+	position: absolute;
+	bottom: 30px;
+	left: 477px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+.board_column_seven {
+	position: absolute;
+	bottom: 30px;
+	left: 563px;
+	width: 86px;
+	height: 509px;
+	display: inline-block;
+	border: 2px solid blue;}
+
+.board_row_one {
+	width: 86px;
+	height: 82px;
+	text-align: center;
+	border: 2px solid red;}
+.board_row_two {
+	width: 86px;
+	height: 82px;
+	text-align: center;
+	border: 2px solid red;}
+.board_row_three {
+	width: 86px;
+	height: 82px;
+	text-align: center;
+	vertical-align:text-center;
+	border: 2px solid red;}
+.board_row_four {
+	width: 86px;
+	height: 82px;
+	text-align: center;
+	vertical-align:text-center;
+	border: 2px solid red;}
+.board_row_five {
+	width: 86px;
+	height: 82px;
+	text-align: center;
+	vertical-align:text-center;
+	border: 2px solid red;}
+.board_row_six {
+	width: 86px;
+	height: 82px;
+	text-align: center;
+	vertical-align:text-center;
+	border: 2px solid red;}
+
+
+.red_token {
+	background-color: red;
+}
+
+
 .background {
 	background-color: #FFF9F9;
 }
@@ -81,8 +205,14 @@
 	position: absolute;
 	right: 30px;
 	bottom: 5px;
-
 }
+
+.logout_stuff {
+	display: inline-block;
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	top: 20px;
+	right: 20px;}
 
 
 // Place all the styles related to the games controller here.
