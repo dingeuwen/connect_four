@@ -1,3 +1,91 @@
+
+
+
+.home_sign_in {
+	font-family: 'Permanent Marker', cursive;
+	display:inline-block;
+	position: absolute;
+	left: 730px;
+	top: 110px;}
+.home_sign_in_title {
+	padding-left: 50px;}
+.home_sign_in_email {
+	position: absolute;
+	top: 50px;
+	left: 0;}
+.home_sign_in_password {
+	position: absolute;
+	top: 50px;
+	left: 230px;}
+.home_sign_in_remainder {
+	position: absolute;
+	top: 130px;}
+.home_sign_in_button {
+	position: absolute;
+	top: 10px;
+	left: 350px;}
+
+
+
+.home_sign_up {
+	font-family: 'Permanent Marker', cursive;
+	display: inline-block;
+	position: absolute;
+	left: 730px;
+	top: 300px;}
+.home_sign_up_title {
+	padding-left: 50px;
+	padding-bottom: 20px;}
+.home_sign_up_section_one {
+	position: absolute;
+	top: 50px;
+	left:0;}
+.home_sign_up_section_two {
+	position: absolute;
+	top: 50px;
+	left: 230px;}
+.home_sign_up_button {
+	position: absolute;
+	top: 230px;
+	left: 350px;}
+
+
+
+
+.connect_four_title {
+    font-family: 'Permanent Marker', cursive;
+    margin: 40px 0 50px 70px;
+    display: inline-block;
+}
+
+.game_board {
+	background-color: #FFF9F9;
+  	border-bottom: 20px solid #558bc7;
+  	border-left: 20px solid #558bc7;
+  	border-right: 20px solid #558bc7;
+  	border-radius: 20px;
+  	position: relative;
+  	width: 600px;
+  	height: auto;
+  	margin: 0 50px 0 30px;
+  	padding: 0;
+}
+
+.background {
+	background-color: #FFF9F9;
+}
+
+.footer {
+	display: inline-block;
+	font-family: 'Permanent Marker', cursive;
+	position: absolute;
+	right: 30px;
+	bottom: 5px;
+
+}
+
+
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+

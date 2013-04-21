@@ -1,5 +1,4 @@
 
-
 <p>
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.
@@ -9,7 +8,6 @@
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-
 
 <!-- :email, :password, :password_confirmation, :remember_me, 
 :username, :first_name, :last_name, :country -->
@@ -61,7 +59,12 @@
 <input type='hidden' value="<%= user.id %>" name='opponent'/>
 <button type="submit"><%= user.username %></button> 
 <% end %>
-  , <%= user.country %></p>
+  , <%= user.country %>
+  , Total Wins: <%= user.total_wins %>
+  , Total Loss: <%= user.total_loss %>
+  , 
+</p>
+
 <% end %>
 
 

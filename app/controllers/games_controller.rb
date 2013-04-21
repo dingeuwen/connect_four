@@ -81,21 +81,25 @@ class GamesController < ApplicationController
     selected_column = params[:column].to_i
 
     if @game.whos_turn == @game.user1_id
+      # update board
       @game.user_a_turn(selected_column)
-      @game.whos_turn = @game.user2_id
+      
     elsif @game.whos_turn == @game.user2_id
       @game.user_b_turn(selected_column)
-      @game.whos_turn = @game.user1_id
     end
 
     @game.check_for_win
 
     if @game.game_status == 2
        @game.update_attributes(params[:game])
-       
-       
-
        render :action => 'endgame' and return
+    end
+    
+    # switch users
+    if @game.whos_turn == @game.user1_id
+      @game.whos_turn = @game.user2_id
+    elsif @game.whos_turn == @game.user2_id
+      @game.whos_turn = @game.user1_id
     end
 
     respond_to do |format|

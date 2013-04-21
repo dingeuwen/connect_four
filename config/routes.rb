@@ -7,7 +7,7 @@ ConnectFourC::Application.routes.draw do
 
   devise_for :users
 
-  root :to => 'pages#home'
+  root :to => 'games#index'
   match '/public', :to => 'pages#public'
   match '/private', :to => 'pages#private'
   post '/send_email' => 'pages#send_email'
