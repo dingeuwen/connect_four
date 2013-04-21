@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130419043701) do
+ActiveRecord::Schema.define(:version => 20130421050514) do
 
   create_table "gameplays", :force => true do |t|
     t.integer  "user1_id"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(:version => 20130419043701) do
     t.text     "spaces"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user1_id"
+    t.integer  "user2_id"
   end
 
   create_table "users", :force => true do |t|
@@ -46,6 +48,8 @@ ActiveRecord::Schema.define(:version => 20130419043701) do
     t.string   "last_name"
     t.string   "username"
     t.string   "country"
+    t.integer  "total_wins"
+    t.integer  "total_loss"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

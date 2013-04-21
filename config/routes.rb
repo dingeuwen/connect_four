@@ -10,6 +10,7 @@ ConnectFourC::Application.routes.draw do
   root :to => 'pages#home'
   match '/public', :to => 'pages#public'
   match '/private', :to => 'pages#private'
+  post '/send_email' => 'pages#send_email'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

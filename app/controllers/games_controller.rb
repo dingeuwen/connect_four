@@ -1,8 +1,17 @@
 class GamesController < ApplicationController
+  
+  before_filter :authenticate_user!
+
   # GET /games
   # GET /games.json
   def index
     @games = Game.all
+    @user = User.all
+    @user_without_current_user = User.find(:all, :conditions => ["id != ?", current_user.id])
+    selected_games_a = Game.where(:user1_id => current_user.id)
+    selected_games_b = Game.where(:user2_id => current_user.id)
+    selected_games = selected_games_a << selected_games_b
+    @selected_games = selected_games.flatten.select { |game| game.game_status == 1}
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,6 +23,9 @@ class GamesController < ApplicationController
   # GET /games/1.json
   def show
     @game = Game.find(params[:id])
+
+    @gameplay = @game.gameplay
+    # @gameplay = Gameplay.find_by_game_id(@game.id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,13 +52,16 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.json
   def create
-    @game = Game.new(params[:game])
-
+    @game = Game.new(params[:game]) #DONT REALLY GET THIS? WHERE WAS GAME SAVED TO PARAMS? 
+    # @game.id.inspect
     @game.game_status = 1
-    @game.whos_turn = 1
+    @game.whos_turn = current_user.id
     @game.spaces = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
                     [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
                     [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
+
+    @game.user1_id = current_user.id 
+    @game.user2_id = params[:opponent]
 
     respond_to do |format|
       if @game.save
@@ -65,17 +80,21 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
     selected_column = params[:column].to_i
 
-    if @game.whos_turn == 1
+    if @game.whos_turn == @game.user1_id
       @game.user_a_turn(selected_column)
-      @game.whos_turn = 2
-    elsif @game.whos_turn == 2
+      @game.whos_turn = @game.user2_id
+    elsif @game.whos_turn == @game.user2_id
       @game.user_b_turn(selected_column)
-      @game.whos_turn = 1
+      @game.whos_turn = @game.user1_id
     end
 
     @game.check_for_win
 
     if @game.game_status == 2
+       @game.update_attributes(params[:game])
+       
+       
+
        render :action => 'endgame' and return
     end
 

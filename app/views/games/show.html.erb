@@ -18,8 +18,6 @@ GAME_STATUS = 0 IF ON-GOING, 1 IF WIN OR DRAW.
 WHOS_TURN = USER ID NUMBER OF USER 1/USER 2
 SPACES = A STRING/TEXT LOADED ONTO MARSHALL DUMP
 
-<% s=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]] %>
-
 <% @board = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
              [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]] %>
@@ -38,40 +36,58 @@ SPACES = A STRING/TEXT LOADED ONTO MARSHALL DUMP
 
 <!-- Note that the name is basically the key with which the value will be stored against in the params hash that the form will save to. -->
 
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="1" name='column'/>
-<button type="submit">Column 1</button> 
-<% end %>
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="2" name='column'/>
-<button type="submit">Column 2</button> 
-<% end %>
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="3" name='column'/>
-<button type="submit">Column 3</button> 
-<% end %>
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="4" name='column'/>
-<button type="submit">Column 4</button> 
-<% end %>
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="5" name='column'/>
-<button type="submit">Column 5</button> 
-<% end %>
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="6" name='column'/>
-<button type="submit">Column 6</button> 
-<% end %>
-<%= form_tag(game_path(@game), :method => "put") do %>
-<input type='hidden' value="7" name='column'/>
-<button type="submit">Column 7</button> 
+
+
+
+<% if current_user.id == @game.whos_turn %>
+
+  <% if current_user.id == @game.user1_id %>
+    <h1> YOU ARE X. CHOOSE COLUMN TO PLACE YOUR TOKEN </h1> 
+  <% elsif current_user.id == @game.user2_id %>
+    <h1> YOU ARE *. CHOOSE COLUMN TO PLACE YOUR TOKEN </h1>
+  <% end %>
+
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="1" name='column'/>
+  <button type="submit">Column 1</button> 
+  <% end %>
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="2" name='column'/>
+  <button type="submit">Column 2</button> 
+  <% end %>
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="3" name='column'/>
+  <button type="submit">Column 3</button> 
+  <% end %>
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="4" name='column'/>
+  <button type="submit">Column 4</button> 
+  <% end %>
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="5" name='column'/>
+  <button type="submit">Column 5</button> 
+  <% end %>
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="6" name='column'/>
+  <button type="submit">Column 6</button> 
+  <% end %>
+  <%= form_tag(game_path(@game), :method => "put") do %>
+  <input type='hidden' value="7" name='column'/>
+  <button type="submit">Column 7</button> 
+  <% end %>
+
 <% end %>
 
-<!-- 
-<% if @game.game_status == 2 %>
-<%= "GAME OVER" %>
-<% end %>
- -->
+ <h4> send an e-mail from here. its pretty crazy I know. Do it anyway. </h4>
+
+
+<form action="/send_email" method="post">
+  <label> To </label>
+  <div><input type="email" placeholder="Send to (email address)" name="to"></div>
+  <div><input type="text" placeholder="Your subject" name="subject"></div>
+  <div><%= text_area_tag(:body, "", :placeholder => "Enter your message") %></div>
+  <div><%= submit_tag "Send yo e-mail" %></div>
+</form>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
