@@ -85,7 +85,6 @@
 }
 
 .game_board {
-	background-color: #FFF9F9;
   	border-bottom: 20px solid #558bc7;
   	border-left: 20px solid #558bc7;
   	border-right: 20px solid #558bc7;
@@ -95,103 +94,145 @@
   	height: auto;
   	margin: 0 50px 0 30px;
   	padding: 0;
+  	z-index: 1;
 }
 
 .board_column_one {
 	position: absolute;
 	bottom: 30px;
 	left: 47px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 .board_column_two {
 	position: absolute;
 	bottom: 30px;
 	left: 133px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 .board_column_three {
 	position: absolute;
 	bottom: 30px;
 	left: 219px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 .board_column_four {
 	position: absolute;
 	bottom: 30px;
 	left: 305px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 .board_column_five {
 	position: absolute;
 	bottom: 30px;
 	left: 391px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 .board_column_six {
 	position: absolute;
 	bottom: 30px;
 	left: 477px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 .board_column_seven {
 	position: absolute;
 	bottom: 30px;
 	left: 563px;
-	width: 86px;
+	width: 84px;
 	height: 509px;
 	display: inline-block;
-	border: 2px solid blue;}
+	padding: 0;
+	margin: 0}
 
 .board_row_one {
-	width: 86px;
-	height: 82px;
-	text-align: center;
-	border: 2px solid red;}
+	width: 84px;
+	height: 84px;
+	padding: 0;
+	margin: 0}
 .board_row_two {
-	width: 86px;
-	height: 82px;
-	text-align: center;
-	border: 2px solid red;}
+	width: 84px;
+	height: 84px;
+	padding: 0;
+	margin: 0}
 .board_row_three {
-	width: 86px;
-	height: 82px;
-	text-align: center;
-	vertical-align:text-center;
-	border: 2px solid red;}
+	width: 84px;
+	height: 84px;
+	padding: 0;
+	margin: 0}
 .board_row_four {
-	width: 86px;
-	height: 82px;
-	text-align: center;
-	vertical-align:text-center;
-	border: 2px solid red;}
+	width: 84px;
+	height: 84px;
+	padding: 0;
+	margin: 0}
 .board_row_five {
-	width: 86px;
-	height: 82px;
-	text-align: center;
-	vertical-align:text-center;
-	border: 2px solid red;}
+	width: 84px;
+	height: 84px;
+	padding: 0;
+	margin: 0}
 .board_row_six {
-	width: 86px;
-	height: 82px;
+	width: 84px;
+	height: 84px;
+	padding: 0;
+	margin: 0;}
+
+
+.show_waiting {
+	display: inline-block;
+	width: 400px;
 	text-align: center;
-	vertical-align:text-center;
-	border: 2px solid red;}
+	position: absolute;
+	top: 40px;
+	right: -500px;
+	font-family: 'Permanent Marker', cursive;
+}
+.show_message {
+	display: inline-block;
+	width: 400px;
+	text-align: center;
+	position: absolute;
+	top: 40px;
+	right: -500px;
+	font-family: 'Permanent Marker', cursive;
+}
+.show_back_button {
+	display: inline-block;
+	width: 400px;
+	text-align: right;
+	position: absolute;
+	top: 500px;
+	right: -500px;
+	font-family: 'Permanent Marker', cursive;
+}
 
 
 .red_token {
 	background-color: red;
+	z-index: -1;
+	padding: 0;
+	margin: 0;
+}
+.black_token {
+	background-color: black;
+	z-index: -1;
+	padding: 0;
+	margin: 0;
 }
 
 

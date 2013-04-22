@@ -31,77 +31,288 @@ font-family: 'Permanent Marker', cursive; -->
 <% @board = @game.spaces %>
 
 <div class="board_column_one">
-  <div class="board_row_one"><%= @board[1][1] %></div>
-  <div class="board_row_two"><%= @board[1][2] %></div>
-  <div class="board_row_three"><%= @board[1][3] %></div>
-  <div class="board_row_four"><%= @board[1][4] %></div>
-  <div class="board_row_five"><%= @board[1][5] %></div>
-  <div class="board_row_six"><%= @board[1][6] %></div>
+  <div class="board_row_one">
+    <% if @board[1][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[1][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+    <% if @board[1][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[1][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+    <% if @board[1][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[1][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+    <% if @board[1][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[1][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+  <% if @board[1][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[1][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_six">
+    <% if @board[1][6] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[1][6] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
 </div>
 
 <div class="board_column_two">
-  <div class="board_row_one"><%= @board[2][1] %></div>
-  <div class="board_row_two"><%= @board[2][2] %></div>
-  <div class="board_row_three"><%= @board[2][3] %></div>
-  <div class="board_row_four"><%= @board[2][4] %></div>
-  <div class="board_row_five"><%= @board[2][5] %></div>
-  <div class="board_row_six"><%= @board[2][6] %></div>
+  <div class="board_row_one">
+    <% if @board[2][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[2][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+    <% if @board[2][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[2][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+    <% if @board[2][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[2][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+    <% if @board[2][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[2][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+    <% if @board[2][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[2][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_six">
+    <% if @board[2][6] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[2][6] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
 </div>
 
 <div class="board_column_three">
-  <div class="board_row_one"><%= @board[3][1] %></div>
-  <div class="board_row_two"><%= @board[3][2] %></div>
-  <div class="board_row_three"><%= @board[3][3] %></div>
-  <div class="board_row_four"><%= @board[3][4] %></div>
-  <div class="board_row_five"><%= @board[3][5] %></div>
-  <div class="board_row_six"><%= @board[3][6] %></div>
+  <div class="board_row_one">
+    <% if @board[3][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[3][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+    <% if @board[3][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[3][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+    <% if @board[3][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[3][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+    <% if @board[3][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[3][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+    <% if @board[3][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[3][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_six">
+    <% if @board[3][6] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[3][6] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
 </div>
 
 <div class="board_column_four">
-  <div class="board_row_one"><%= @board[4][1] %></div>
-  <div class="board_row_two"><%= @board[4][2] %></div>
-  <div class="board_row_three"><%= @board[4][3] %></div>
-  <div class="board_row_four"><%= @board[4][4] %></div>
-  <div class="board_row_five"><%= @board[4][5] %></div>
-  <div class="board_row_six"><%= @board[4][6] %></div>
+  <div class="board_row_one">
+    <% if @board[4][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[4][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+    <% if @board[4][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[4][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+    <% if @board[4][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[4][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+    <% if @board[4][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[4][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+    <% if @board[4][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[4][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_six">
+  <% if @board[4][6] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[4][6] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  </div>
 </div>
 
 <div class="board_column_five">
-  <div class="board_row_one"><%= @board[5][1] %></div>
-  <div class="board_row_two"><%= @board[5][2] %></div>
-  <div class="board_row_three"><%= @board[5][3] %></div>
-  <div class="board_row_four"><%= @board[5][4] %></div>
-  <div class="board_row_five"><%= @board[5][5] %></div>
-  <div class="board_row_six"><%= @board[5][6] %></div>
+  <div class="board_row_one">
+    <% if @board[5][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[5][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+    <% if @board[5][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[5][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+    <% if @board[5][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[5][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+    <% if @board[5][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[5][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+    <% if @board[5][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[5][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_six">
+    <% if @board[5][6] == "X" %>
+      <div class="board_row_six red_token"></div>
+    <% elsif @board[5][6] == "*" %>
+      <div class="board_row_six black_token"></div>
+    <% end %></div>
+  </div>
 </div>
 
 <div class="board_column_six">
-  <div class="board_row_one"><%= @board[6][1] %></div>
-  <div class="board_row_two"><%= @board[6][2] %></div>
-  <div class="board_row_three"><%= @board[6][3] %></div>
-  <div class="board_row_four"><%= @board[6][4] %></div>
-  <div class="board_row_five"><%= @board[6][5] %></div>
-  <div class="board_row_six"><%= @board[6][6] %></div>
+  <div class="board_row_one">
+    <% if @board[6][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[6][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+    <% if @board[6][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[6][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+    <% if @board[6][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[6][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+    <% if @board[6][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[6][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+    <% if @board[6][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[6][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_six">
+    <% if @board[6][6] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[6][6] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  </div>
 </div>
 
 <div class="board_column_seven">
-  <div class="board_row_one"><%= @board[7][1] %></div>
-  <div class="board_row_two"><%= @board[7][2] %></div>
-  <div class="board_row_three"><%= @board[7][3] %></div>
-  <div class="board_row_four"><%= @board[7][4] %></div>
-  <div class="board_row_five"><%= @board[7][5] %></div>
+  <div class="board_row_one">
+<% if @board[7][1] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[7][1] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_two">
+<% if @board[7][2] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[7][2] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_three">
+<% if @board[7][3] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[7][3] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_four">
+  <% if @board[7][4] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[7][4] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
+  <div class="board_row_five">
+  <% if @board[7][5] == "X" %>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[7][5] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
   <div class="board_row_six">
     <% if @board[7][6] == "X" %>
-    <div class="red_token"></div></div>
-</div>
+    <div class="board_row_six red_token"></div>
+    <% elsif @board[7][6] == "*" %>
+    <div class="board_row_six black_token"></div>
+    <% end %></div>
 
 
 <% if current_user.id == @game.whos_turn %>
 
+<div class="show_message">
   <% if current_user.id == @game.user1_id %>
-    <h3> YOU ARE X. CHOOSE COLUMN TO PLACE YOUR TOKEN </h3> 
+    <h3> YOU ARE RED. CHOOSE COLUMN TO PLACE YOUR TOKEN </h3> 
   <% elsif current_user.id == @game.user2_id %>
-    <h3> YOU ARE *. CHOOSE COLUMN TO PLACE YOUR TOKEN </h3>
+    <h3> YOU ARE BLACK. CHOOSE COLUMN TO PLACE YOUR TOKEN </h3>
   <% end %>
 
   <%= form_tag(game_path(@game), :method => "put") do %>
@@ -131,63 +342,17 @@ font-family: 'Permanent Marker', cursive; -->
   <%= form_tag(game_path(@game), :method => "put") do %>
   <input type='hidden' value="7" name='column'/>
   <button type="submit">Column 7</button> 
-  <% end %>
+  <% end %></div>
+
+  <% else %>
+
+  <h3 class="show_waiting"> Waiting for your opponent to make a move </h3>
 
 <% end %>
 
-
+<div class="show_back_button">
 <%= link_to 'Back', games_path %>
-
+</div>
 
 </body>
-
-
-
-
-
-<!-- 
-<p><%= "|#{@board[1][1]}|#{@board[2][1]}|#{@board[3][1]}|#{@board[4][1]}|#{@board[5][1]}|#{@board[6][1]}|#{@board[7][1]}|" %></p>
-<p><%= "|#{@board[1][2]}|#{@board[2][2]}|#{@board[3][2]}|#{@board[4][2]}|#{@board[5][2]}|#{@board[6][2]}|#{@board[7][2]}|" %></p>
-<p><%= "|#{@board[1][3]}|#{@board[2][3]}|#{@board[3][3]}|#{@board[4][3]}|#{@board[5][3]}|#{@board[6][3]}|#{@board[7][3]}|" %></p>
-<p><%= "|#{@board[1][4]}|#{@board[2][4]}|#{@board[3][4]}|#{@board[4][4]}|#{@board[5][4]}|#{@board[6][4]}|#{@board[7][4]}|" %></p>
-<p><%= "|#{@board[1][5]}|#{@board[2][5]}|#{@board[3][5]}|#{@board[4][5]}|#{@board[5][5]}|#{@board[6][5]}|#{@board[7][5]}|" %></p>
-<p><%= "|#{@board[1][6]}|#{@board[2][6]}|#{@board[3][6]}|#{@board[4][6]}|#{@board[5][6]}|#{@board[6][6]}|#{@board[7][6]}|" %></p>
-
-<p>
-  <b>Game status:</b>
-  <%= @game.game_status %>
-</p>
-
-<p>
-  <b>Whos turn:</b>
-  <%= @game.whos_turn %>
-</p>
-
-
-
-k = Marshal.load(@game.spaces) 
-
-NOTE THAT: 
-GAME_STATUS = 0 IF ON-GOING, 1 IF WIN OR DRAW. 
-WHOS_TURN = USER ID NUMBER OF USER 1/USER 2
-SPACES = A STRING/TEXT LOADED ONTO MARSHALL DUMP
-
-<% @board = [[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],
-             [0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]] %>
-
-
-
- Note that the name is basically the key with which the value will be stored against in the params hash that the form will save to.
-
-
- <h4> send an e-mail from here. its pretty crazy I know. Do it anyway. </h4>
-<form action="/send_email" method="post">
-  <label> To </label>
-  <div><input type="email" placeholder="Send to (email address)" name="to"></div>
-  <div><input type="text" placeholder="Your subject" name="subject"></div>
-  <div><%= text_area_tag(:body, "", :placeholder => "Enter your message") %></div>
-  <div><%= submit_tag "Send yo e-mail" %></div>
-</form>
- -->
 
