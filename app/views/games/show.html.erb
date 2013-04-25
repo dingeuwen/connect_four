@@ -30,6 +30,10 @@ font-family: 'Permanent Marker', cursive; -->
 
 <% @board = @game.spaces %>
 
+
+<%= link_to game_path(@game, :column => 1), :method => "put" do %>
+<% end %>
+
 <div class="board_column_one">
   <div class="board_row_one">
     <% if @board[1][1] == "X" %>
@@ -68,6 +72,8 @@ font-family: 'Permanent Marker', cursive; -->
     <div class="board_row_six black_token"></div>
     <% end %></div>
 </div>
+
+
 
 <div class="board_column_two">
   <div class="board_row_one">
@@ -306,6 +312,7 @@ font-family: 'Permanent Marker', cursive; -->
     <% end %></div>
 
 
+
 <% if current_user.id == @game.whos_turn %>
 
 <div class="show_message">
@@ -319,6 +326,7 @@ font-family: 'Permanent Marker', cursive; -->
   <input type='hidden' value="1" name='column'/>
   <button type="submit">Column 1</button> 
   <% end %>
+
   <%= form_tag(game_path(@game), :method => "put") do %>
   <input type='hidden' value="2" name='column'/>
   <button type="submit">Column 2</button> 

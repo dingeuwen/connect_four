@@ -89,12 +89,12 @@
   	border-left: 20px solid #558bc7;
   	border-right: 20px solid #558bc7;
   	border-radius: 20px;
-  	position: relative;
   	width: 600px;
   	height: auto;
   	margin: 0 50px 0 30px;
   	padding: 0;
   	z-index: 1;
+  	position: relative;
 }
 
 .board_column_one {
@@ -223,7 +223,7 @@
 
 
 .red_token {
-	background-color: red;
+	background-color: #EA0000;
 	z-index: -1;
 	padding: 0;
 	margin: 0;
